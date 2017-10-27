@@ -124,6 +124,7 @@ class ConvergeGenerateTokenRequest extends ConvergeAbstractRequest
             'ssl_address2' => $this->getCard()->getAddress2(),
             'ssl_city' => $this->getCard()->getCity(),
             'ssl_state' => $this->getCard()->getState(),
+            'ssl_avs_zip' => $this->getCard()->getPostcode(),
             'ssl_country' => $this->getCard()->getCountry(),
             'ssl_add_token' => 'Y',
 
