@@ -65,11 +65,21 @@ class ConvergeAuthorizeRequestTest extends TestCase
 
     public function testAuthorizeSuccess()
     {
-        $this->setMockHttpResponse('ConvergePurchaseResponse.txt');
+        $this->setMockHttpResponse('ConvergeAuthorizeResponse.txt');
         $response = $this->request->send();
         $this->assertTrue($response->isSuccessful());
         $this->assertSame('APPROVED', $response->getMessage());
         $this->assertSame('0', $response->getCode());
+        $this->assertSame('00000000-0000-0000-0000-00000000000', $response->getTransactionReference());
+    }
+
+    public function testAuthorizeDeclined()
+    {
+        $this->setMockHttpResponse('ConvergeAuthorizeDeclinedResponse.txt');
+        $response = $this->request->send();
+        $this->assertFalse($response->isSuccessful());
+        $this->assertSame('DECLINED', $response->getMessage());
+        $this->assertSame('1', $response->getCode());
         $this->assertSame('00000000-0000-0000-0000-00000000000', $response->getTransactionReference());
     }
 

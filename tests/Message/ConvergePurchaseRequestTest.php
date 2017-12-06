@@ -64,6 +64,16 @@ class ConvergePurchaseRequestTest extends TestCase
         $this->assertSame('00000000-0000-0000-0000-00000000000', $response->getTransactionReference());
     }
 
+    public function testPurchaseDeclined()
+    {
+        $this->setMockHttpResponse('ConvergePurchaseDeclinedResponse.txt');
+        $response = $this->request->send();
+        $this->assertFalse($response->isSuccessful());
+        $this->assertSame('DECLINED', $response->getMessage());
+        $this->assertSame('1', $response->getCode());
+        $this->assertSame('00000000-0000-0000-0000-00000000000', $response->getTransactionReference());
+    }
+
     public function testPurchaseNoVID()
     {
         $this->setMockHttpResponse('NoVIDFailureResponse.txt');
