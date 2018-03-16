@@ -65,7 +65,7 @@ namespace Omnipay\Elavon\Message;
  * }
  * </code>
  *
- * @link https://www.myvirtualmerchant.com/VirtualMerchant/
+ * @link https://api.convergepay.com/VirtualMerchant/
  * @link https://resourcecentre.elavonpaymentgateway.com/index.php/download-developer-guide
  * @see \Omnipay\Elavon\ConvergeGateway
  */

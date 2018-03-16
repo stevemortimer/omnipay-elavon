@@ -103,14 +103,14 @@ use Omnipay\Common\CreditCard;
  * $transaction->setSslResultFormat('ASCII');
  * </code>
  *
- * @link https://www.myvirtualmerchant.com/VirtualMerchant/
+ * @link https://api.convergepay.com/VirtualMerchant/
  * @link https://resourcecentre.elavonpaymentgateway.com/index.php/download-developer-guide
  * @see \Omnipay\Elavon\ConvergeGateway
  */
 abstract class ConvergeAbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
-    protected $testEndpoint = 'https://demo.myvirtualmerchant.com/VirtualMerchantDemo';
-    protected $liveEndpoint = 'https://www.myvirtualmerchant.com/VirtualMerchant';
+    protected $testEndpoint = 'https://api.demo.convergepay.com/VirtualMerchantDemo';
+    protected $liveEndpoint = 'https://api.convergepay.com/VirtualMerchant';
 
     public function getEndpoint()
     {

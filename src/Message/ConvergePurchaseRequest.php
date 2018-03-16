@@ -96,7 +96,7 @@ namespace Omnipay\Elavon\Message;
  * $transaction->setSslResultFormat('ASCII');
  * </code>
  *
- * @link https://www.myvirtualmerchant.com/VirtualMerchant/
+ * @link https://api.convergepay.com/VirtualMerchant/
  * @link https://resourcecentre.elavonpaymentgateway.com/index.php/download-developer-guide
  * @see \Omnipay\Elavon\ConvergeGateway
  */
