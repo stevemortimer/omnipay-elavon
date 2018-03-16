@@ -90,7 +90,7 @@ use Omnipay\Common\AbstractGateway;
  * ### Dashboard
  *
  * For test payments you should be given a Login URL which will be
- * https://demo.myvirtualmerchant.com/VirtualMerchantDemo/login.do
+ * https://api.demo.convergepay.com/VirtualMerchantDemo/login.do
  *
  * ... and some website credentials.  These will be:
  *
@@ -100,7 +100,7 @@ use Omnipay\Common\AbstractGateway;
  *
  * The password usually needs to be reset periodically.
  *
- * @link https://www.myvirtualmerchant.com/VirtualMerchant/
+ * @link https://api.convergepay.com/VirtualMerchant/
  * @link https://resourcecentre.elavonpaymentgateway.com/index.php/download-developer-guide
  * @see \Omnipay\Elavon\Message\ConvergeAbstractRequest
  */

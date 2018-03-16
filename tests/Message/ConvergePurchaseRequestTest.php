@@ -34,13 +34,13 @@ class ConvergePurchaseRequestTest extends TestCase
     public function testGetTestEndpoint()
     {
         $this->assertSame($this->request, $this->request->setTestMode(true));
-        $this->assertSame('https://demo.myvirtualmerchant.com/VirtualMerchantDemo', $this->request->getEndpoint());
+        $this->assertSame('https://api.demo.convergepay.com/VirtualMerchantDemo', $this->request->getEndpoint());
     }
 
     public function testGetLiveEndpoint()
     {
         $this->assertSame($this->request, $this->request->setTestMode(false));
-        $this->assertSame('https://www.myvirtualmerchant.com/VirtualMerchant', $this->request->getEndpoint());
+        $this->assertSame('https://api.convergepay.com/VirtualMerchant', $this->request->getEndpoint());
     }
 
     public function testGetData()
