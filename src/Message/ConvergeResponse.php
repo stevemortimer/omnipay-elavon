@@ -17,6 +17,11 @@ class ConvergeResponse extends AbstractResponse
     {
         return (isset($this->data['ssl_result']) && $this->data['ssl_result'] == 0);
     }
+    
+    public function getAuthorizationCode()
+    {
+        return (isset($this->data['ssl_approval_code'])) ? $this->data['ssl_approval_code'] : null;
+    }
 
     public function getTransactionReference()
     {
